@@ -1,0 +1,26 @@
+body{
+    min-height: 100vh;
+    color: $txt_color_1;
+    background-color: $bg_color_1;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container{
+    position: relative;
+    @include container;
+    margin: auto;
+    max-width: 1440px;
+    padding: 0 60px;
+    @include Laptops{
+        padding: 0 180px;
+    }
+    @include Phones_max{
+        padding: 0 20px;
+    }
+    .body{
+        @include Dfx_JCc_AIc;
+        grid-column: 1/-1;
+    }
+}
+header{
+    height: 100vh;
+}

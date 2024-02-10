@@ -1,0 +1,28 @@
+body{
+    min-height: 100vh;
+}
+.container{
+    @include container;
+    min-height: 100px;
+    max-width: 1440px;
+    h1{
+        grid-column: 2;
+    }
+    padding: 0 60px;
+    @include Laptops{
+        padding: 0 180px;
+    }
+    @include Phones_max{
+        padding: 0 20px;
+    }
+}
+header{
+    background-color: red;
+}
+main{
+    background-color: green;
+    min-height: 50vh;
+}
+footer{
+    background-color: brown;
+}

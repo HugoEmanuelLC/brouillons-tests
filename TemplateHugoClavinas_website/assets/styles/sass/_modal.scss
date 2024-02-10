@@ -1,0 +1,135 @@
+.modal{
+    background-color: $bg_color_1_2;
+    backdrop-filter: blur(15px);
+    position: absolute;
+        top: 50%;
+        z-index: 10;
+    transition: 400ms ease-in;
+
+    .btn_modal_off{
+        position: absolute;
+            top: 20px;
+            right: 20px;
+    }
+}
+
+.modal_intro{
+    background-color: $bg_color_1;
+    @include Dfx_JCc_AIc;
+    position: fixed;
+        top: 0;
+        z-index: 10;
+    flex-direction: column;
+    transition: 400ms ease-in;
+    overflow: hidden;
+    text-align: center;
+
+    text-shadow: $txt_shadow_1;
+    color: $txt_color_1_2;
+
+    h1{
+        font-size: 10vw;
+        margin: 10px 0;
+        color: red;
+    }
+    h2{
+        font-size: 8vw;
+    }
+    h1 + h2{
+        font-size: 11vw;
+    }
+    span{
+        height: 5px;
+        width: 60vw;
+        background-color: red;
+        border-radius: 50%;
+    }
+    a{
+        font-size: 10vw;
+        margin-top: 60px;
+        padding: 10px 20px;
+        background-color: chocolate;
+        color: white;
+        border-radius: 20px;
+        box-shadow: $txt_shadow_1;
+        transition: 400ms ease-in;
+
+        &:hover{
+            background-color: rgba(30, 210, 60, 0.505);
+            box-shadow: $bg_shadow_1_2;
+        }
+    }
+
+    @include Tablets{
+        h1{
+            font-size: 5rem;
+        }
+        h2{
+            font-size: 4rem;
+        }
+        h1 + h2{
+            font-size: 6rem;
+        }
+        span{
+            height: 5px;
+            width: 600px;
+        }
+        a{
+            font-size: 5rem;
+        }
+    }
+}
+
+// ABOUT
+.bloc_about{
+    color: $txt_color_1_2;
+    @include Dfx_JCc_AIc;
+    flex-direction: column;
+    margin: 10%;
+
+    @include Tablets{
+        margin: 100px;
+    }
+
+    h2{
+        text-align: center;
+        font-size: 10vw;
+        @include Tablets{
+            font-size: 5rem;
+        }
+    }
+
+    img{
+        width: 50vw;
+        opacity: 0.7;
+        margin: 50px 0;
+
+        @include Tablets{
+            width: 400px;
+        }
+    }
+    p{
+        max-width: 800px;
+        line-height: 30px;
+    }
+}
+
+.modal_active{
+    width: 100%;
+    min-height: 100vh;
+    top: 0px;
+}
+.modal_desactive{
+    transition: 400ms;
+    width: 0%;
+    height: 0%;
+    font-size: 0;
+    h1,h2,a, img{
+        width: 0;
+        height: 0;
+        font-size: 0;
+    }
+}
+
+
+

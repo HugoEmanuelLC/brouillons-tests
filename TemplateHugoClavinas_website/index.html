@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- librairy aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- css -->
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <title>Template | portfolio hugo clavinas </title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <!-- <h1>Header</h1> -->
+            <div class="body">
+                <div class="blocs blocs_animed">
+                    <h1>HugoClavinas</h1>
+                    <div class="bloc bloc_animed">
+                        <span class="footer"></span>
+                        <div class="link btn_modal_on" style="--i:0;">About</div>
+                        <div class="link" style="--i:1;">Prototypes</div>
+                        <div class="link" style="--i:2;">Skills</div>
+                        <div class="link" style="--i:3;"></div>
+                        <div class="link" style="--i:4;">link05</div>
+                        <div class="link" style="--i:5;">link06</div>
+                    </div>
+                </div>
+
+        <!-- MODAL CONTENUE -->
+                <div class="modal modal_desactive">
+                    <a href="#" class="btn_modal_off"><i class='bx bx-exit-fullscreen'></i></a>
+                    <div class="bloc"></div>
+                </div>
+
+                <template class="template_about">
+                    <div data-aos="fade-up" data-aos-anchor-placement="top"
+                        data-aos-duration="2000"  class="bloc_about"><h2 class="title">ABOUT</h2>
+                        <img src="images/photo_profil.png" alt="">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                            Odit culpa minus magni suscipit cum fugit eius eum beatae, eveniet libero?
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium expedita maxime, eos magnam dolorum, 
+                        vero in quia quis at soluta quisquam ipsam similique quibusdam sint. Nesciunt a beatae unde nostrum quasi incidunt ipsam in! Quia, 
+                        labore vel, 
+                        impedit asperiores obcaecati repudiandae minus corporis provident, quam facilis incidunt earum unde. Similique.</p>
+                    </div>
+                </template>
+
+        <!-- MODAL INTRO -->
+                <div class="modal_intro modal_active">
+                    <h2 data-aos="fade-up" 
+                        data-aos-easing="ease-in-out"
+                        data-aos-delay="1000"
+                        data-aos-duration="1000">Welcome to the</h2>
+
+                    <h1 data-aos="fade-up" 
+                        data-aos-easing="ease-in-out"
+                        data-aos-delay="1500"
+                        data-aos-duration="1000"> Hugo Clavinas</h1>
+
+                    <h2 data-aos="fade-up" 
+                        data-aos-easing="ease-in-out"
+                        data-aos-delay="2000"
+                        data-aos-duration="1000">Portfolio !</h2>
+                    
+                    <span data-aos="fade-right" 
+                        data-aos-easing="ease-in-out"
+                        data-aos-delay="3000"
+                        data-aos-duration="1000"></span>
+
+                    
+                    <a data-aos="fade-up" 
+                        data-aos-easing="ease-in-out"
+                        data-aos-delay="3000"
+                        data-aos-duration="1000" href="#" class="btn_modal_intro_off">Entrer</a>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- <nav>
+                <a href="">about</a>
+                <a href="">skills</a>
+                <a href="">formation</a>
+                <a href="">contact</a>
+                <a href="">infos</a>
+            </nav> -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="container"></div>
+    </footer>
+
+    <!-- librairy aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- navigation animed -->
+    <script src="assets/js/animeNavbar.js"></script>
+    <!-- modals -->
+    <script src="assets/js/modal.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

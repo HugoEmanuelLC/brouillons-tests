@@ -1,0 +1,180 @@
+
+
+$tailleEspace: 22vw;
+$tailleEspace_max: 175px;
+
+$taille: 25vw;
+$taille_max: 200px;
+
+$filter-distance: -60vw;
+$filter-blur: blur(60px);
+
+.Dfx_c{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.blocs{
+    @extend .Dfx_c;
+    position: relative;
+    height: 500px;
+    width: 500px;
+    margin-top: calc(50vh - 250px);
+
+    @include Tablets_max{
+        width: 60vw;
+        height: 60vw;
+        margin-top: calc(50vh - 30vw);
+    }
+
+    @include Phones_max{
+        // margin-top: 100px;
+    }
+    border-radius: 50%;
+    border: solid 2px black;
+    // padding: 100px 0;
+    // margin: 50px 0;
+    background-image: url('../images/240629521.jpg'); //https://cutewallpaper.org/21/1680x1050-hd-wallpaper/240629521.jpg
+    background-repeat: repeat;
+    background-size: contain;
+    // background-attachment: fixed;
+    background-position: center;
+    // color: white;
+
+    h1{
+        position: absolute;
+            z-index: 2;
+        font-size: 10vw;
+        transition: 400ms ease-in;
+        text-shadow: $txt_shadow_1;
+        text-align: center;
+        color: lightskyblue;
+
+        @include Phones_max{
+            top: 0;
+        }
+
+        @include Tablets{
+            font-size: 6rem;
+        }
+    }
+
+    box-shadow: 0 0 60px lightskyblue;
+    // transition: 400ms ease-in;
+
+    &:hover {
+        box-shadow: 0 0 10px lightskyblue;
+    }
+    // &:focus h1,
+    &:hover h1{
+        font-size: 0;
+    }
+
+    .bloc_animed{
+        animation-name: prismaRotate;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    
+    .bloc{
+        background-color: red;
+        background-image: url('../../images/logo01.png');
+        background-repeat: repeat;
+        background-size: contain;
+        background-position: center;
+    
+        width: $taille_max;
+        height: $taille_max;
+        // border-radius: 50%;
+        border-radius: 25%;
+    
+        @include Tablets_max{
+            height: $taille;
+            width: $taille;
+        }
+    
+        @extend .Dfx_c;
+        transform-style: preserve-3d;
+    
+        // transform: rotate3d(0.08, 0.95, 0.1, 0.1turn);
+    
+        // .footer{
+        //     position: absolute;
+        //         bottom: -60vw;
+        //         left: 0;
+        //     width: $taille;
+        //     height: $taille;
+        //     transform: rotateX(90deg) translateZ($tailleEspace);
+    
+        //     &::before{
+        //         background-color: #00ec00;
+        //         content: "";
+        //         position: fixed;
+        //             top: 0;
+        //             right: 0;
+        //         width: $taille;
+        //         height: $taille;
+        //         transform: translateZ($filter-distance);
+        //         filter: $filter-blur ;
+        //     }
+        // }
+    
+        div{
+            background-color: rgba(15, 10, 42, 0.9);
+            // background-color: rgba(103, 26, 7, 0.8);
+            // color: $txt_color_2;
+            -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+            width: $taille_max;
+            height: $taille_max;
+            cursor: pointer;
+            position: absolute;
+            transform: rotateY(calc(60deg * var(--i))) translateZ($tailleEspace_max);
+    
+            @include Tablets_max{
+                transform: rotateY(calc(60deg * var(--i))) translateZ($tailleEspace);
+                height: $taille;
+                width: $taille;
+            }
+            @extend .Dfx_c;
+            // opacity: 0.4;
+            border-radius: 25%;
+            // border-radius: 50%;
+    
+            &:hover{
+                // background-color: rgba(255, 255, 255, 0.2);
+                background-color: rgba(255, 255, 255, 0.2);
+                transition: 300ms;
+                // border-radius: 20px;
+            }
+        }
+    }
+}
+
+.blocs_animed{    
+    animation-name: prismaRotateBackground;
+    
+    @include Tablets_max{
+        animation-name: prismaRotateBackground_tablet_max;
+    }
+
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+@keyframes prismaRotate {
+    0%{transform: rotate3d(0.08, 0.5, 0, 0turn);}
+    100%{transform: rotate3d(0.2, 1, 0, 1turn);}
+}
+@keyframes prismaRotateBackground {
+    // 0%{background-position-x:0px;}
+    100%{background-position-x:500px;}
+}
+@keyframes prismaRotateBackground_tablet_max {
+    // 0%{background-position-x:0px;}
+    100%{background-position-x:60vw;}
+}

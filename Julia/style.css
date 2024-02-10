@@ -1,0 +1,61 @@
+/* INIT */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GLOBAL */
+body{
+    background-color: black;
+}
+
+
+/* HEADER */
+header{
+    background-color: red;
+}
+header .container{
+    height: 10vh;
+    display: flex;
+        justify-content: center;
+}
+header .logo{
+    border: solid 2px white;
+    flex: 1;
+    display: flex;
+        align-items: center;
+}
+header nav{
+    border: solid 2px white;
+    flex: 1;
+    display: flex;
+        align-items: center;
+        justify-content: space-between;
+}
+
+
+main{
+    background-color: green;
+}
+
+footer{
+    background-color: aquamarine;
+}
+.container{
+    background-color: gray;
+    max-width: 1440px;
+    padding: 0 50px;
+    margin: auto;
+}
+section{
+    border: solid 2px white;
+    height: 50vh;
+    /* margin: 20px; */
+}
+
+
+/* MODAL */
+#myModal{
+    display: none;
+}

@@ -1,0 +1,76 @@
+body{
+    min-height: 100vh;
+}
+.container{
+    border: solid white 2px;
+    @include container;
+    min-height: 100px;
+    max-width: 1440px;
+    h1{
+        grid-column: 2;
+    }
+    padding: 0 60px;
+    @include Laptops{
+        padding: 0 180px;
+    }
+    @include Phones_max{
+        padding: 0 20px;
+    }
+}
+header{
+    background-color: red;
+}
+main{
+    background-color: green;
+    min-height: 50vh;
+
+    .slide{
+        position: relative;
+        border: solid 1px red;
+        @include Dfx_JCc_AIc;
+        grid-column: 1/-1;
+        height: 200px ;
+        width: 340px;
+        margin: auto;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        // overflow: hidden;
+    }
+    .item{
+        position: absolute;
+            // right: 0;
+        @include Dfx_JCc_AIc;
+        height: 150px;
+        width: 100px;
+        border: solid 1px blue;
+        transition: 500ms ease-in-out;
+        // transform: translate(0, 0);
+        margin: 10px;
+        
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .item:nth-child(1){animation-name: item_1;animation-duration: .6s;animation-timing-function: ease-in-out;}
+    // .item:nth-child(2){opacity: 0;}
+    // .item:nth-child(3){opacity: 0;}
+    // .item:nth-child(4){opacity: 0;}
+    .item:nth-child(n+2){opacity: 0;}
+    // .item:last-child{animation-name: last_item;animation-duration: .3s;animation-timing-function: ease-in-out;}
+
+
+    @keyframes item_1 {
+        0%{opacity: 0;}
+        100%{opacity: 1;}
+    }
+    // @keyframes last_item {
+    //     0%{opacity: 0;}
+    //     100%{opacity: .5;}
+    // }
+}
+footer{
+    background-color: brown;
+}

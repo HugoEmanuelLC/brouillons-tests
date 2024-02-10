@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>test animation</title>
+</head>
+<body>
+    <button>animation</button>
+    <div class="group">
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+        <span style="--i:4;"></span>
+        <span style="--i:5;"></span>
+        <span style="--i:6;"></span>
+        <span style="--i:7;"></span>
+        <span style="--i:8;"></span>
+    </div>
+
+    <script>
+        document.querySelector('button').addEventListener('click', ()=>{
+            document.querySelector('.group').classList.toggle('anim');
+            console.log('click');
+        })
+    </script>
+</body>
+</html>

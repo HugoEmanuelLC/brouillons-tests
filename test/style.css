@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+button{
+    padding: 10px 20px;
+    cursor: pointer;
+
+}
+span{
+    height: 10px;
+    width: 50px;
+    background-color: blue;
+    box-shadow: 4px 4px 4px rgb(0, 0, 0, 0.5);
+    position: absolute;
+    top: calc(50% - 4px);
+    left: calc(50% - 80px);
+    border-radius: 10px;
+    transform-origin: 80px;
+    transform: rotate(calc(var(--i) * 360deg / 8));
+
+}
+.anim span{    
+    animation:anim 0.8s linear infinite;
+    animation-delay: calc(var(--i) * (0.8s / 8));
+}
+@keyframes anim{
+    0%{
+        background-color: hwb(240 44% 0%);
+    }
+    25%{
+        background-color: transparent;
+    }
+}

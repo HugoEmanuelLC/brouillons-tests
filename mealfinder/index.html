@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meal Finder</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        padding: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      img {
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        cursor: pointer;
+      }
+
+      .meal-list {
+        padding-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      b {
+        font-size: 14px;
+      }
+
+      .modal {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #eaeaea;
+        overflow-y: scroll;
+      }
+
+      .modal img {
+        max-height: 300px;
+        object-fit: cover;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="search-form">
+      <input type="text" placeholder="Search for a meal" />
+      <button>Search</button>
+    </form>
+    <hr />
+
+    <template class="meal-template">
+      <img src="" alt="meal picture" />
+      <b>Meal title</b>
+    </template>
+
+    <template class="modal-template">
+      <button>Go back</button>
+      <br />
+      <img src="" alt="cover" class="cover" />
+      <h2 class="meal-title"></h2>
+      <p><span class="country"></span> food</p>
+      <br />
+      <ul class="ingr-list"></ul>
+      <br />
+      <p class="descr"></p>
+    </template>
+
+    <div class="meal-list"></div>
+
+    <div class="modal hidden"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
